@@ -20,7 +20,7 @@ export default function Home() {
       <div>
         <Navigation />
         <img id="kezdolap" src={img} alt="yoga" className="object-fill" />
-        <div className="flex flex-col text-xl p-16 h-4/5 justify-center content-center text-center">
+        <div id="rolam" className="flex flex-col text-xl p-16 h-4/5 justify-center content-center text-center">
             <h2 className="mb-6 text-2xl">Rólam</h2>
             <p>
               Kovács Kincső vagyok, jógaoktató. 2020-ban szereztem oklevelet,
@@ -40,7 +40,7 @@ export default function Home() {
             Ha szeretnéd felvenni velem a kapcsolatot, keress a megadott
             elérhetőségeken Namaste, Kincső
           </div>
-          <div className="py-6 text-center">
+          <div id="kontakt" className="py-6 text-center">
             <h2 className="mb-6 text-2xl">Kapcsolat</h2>
             <p>Kovács Kincső Sára </p>
             <a href="tel:+36706369104">+36-70-636-9104</a>

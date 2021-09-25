@@ -25,7 +25,7 @@ function Navigation() {
       <div className="hidden md:flex md:justify-between md:w-2/4">
         <a href="#kezdolap">Kezdőlap</a>
         <a href="#rolam">Rólam</a>
-        <a href="#kezdolap">Kapcsolat</a>
+        <a href="#kontakt">Kapcsolat</a>
       </div>
       <div
         className={
