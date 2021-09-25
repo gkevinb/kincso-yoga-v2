@@ -1,44 +1,47 @@
 import React, { useEffect, useState } from "react";
 import MenuIcon from "@material-ui/icons/Menu";
 
-
 function Navigation() {
-    const [toggle, setToggle] = useState(false);
-    const [width, setWidth] = useState("0%");
+  const [toggle, setToggle] = useState(false);
+  const [width, setWidth] = useState("0%");
 
-    console.log(toggle);
+  console.log(toggle);
 
-    const openMenu = () => {
-        setToggle(!toggle);
-    };
-    useEffect(() => {
-        if (toggle) {
-            document.body.style.overflow = "hidden";
-            setWidth("100%");
-        } else {
-            document.body.style.overflow = "unset";
-            setWidth("0%");
-        }
-    }, [toggle]);
+  const openMenu = () => {
+    setToggle(!toggle);
+  };
+  useEffect(() => {
+    if (toggle) {
+      document.body.style.overflow = "hidden";
+      setWidth("100%");
+    } else {
+      document.body.style.overflow = "unset";
+      setWidth("0%");
+    }
+  }, [toggle]);
 
-    return (
-        <div className="navigation">
-            <div className="navigation__modal bg-gray-500" style={{ width: width }}>
-                <h1>Kezdolap</h1>
-                <h1>Rolam</h1>
-                <h1>Kontakt</h1>
-            </div>
-            <div className="navbar">
-                <h1>Kezdolap</h1>
-                <h1>Rolam</h1>
-                <h1>Kontakt</h1>
-            </div>
-
-            <div onClick={openMenu} className="navigation__menu">
-                <MenuIcon fontSize="large" />
-            </div>
-        </div>
-    );
+  return (
+    <div className="flex fixed w-full h-12 bg-red-500 justify-end items-center md:justify-center">
+      <div className="bg-gray-500 hidden md:flex justify-center">
+        <h1>Kezdolap</h1>
+        <h1>Rolam</h1>
+        <h1>Kontakt</h1>
+      </div>
+      <div
+        className={
+          toggle
+            ? "bg-blue-400 fixed flex h-screen w-screen inset-0"
+            : "hidden"
+        }>
+        <h1>Kezdolap</h1>
+        <h1>Rolam</h1>
+        <h1>Kontakt</h1>
+      </div>
+      <div onClick={openMenu} className="md:hidden z-50 justify-self-end">
+        <MenuIcon fontSize="large" />
+      </div>
+    </div>
+  );
 }
 
 export default Navigation;
