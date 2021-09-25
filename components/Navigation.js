@@ -21,25 +21,25 @@ function Navigation() {
   }, [toggle]);
 
   return (
-    <div className="flex fixed w-full h-12 bg-red-500 justify-end items-center md:justify-center">
-      <div className="bg-gray-500 hidden md:flex justify-center">
-        <h1>Kezdolap</h1>
-        <h1>Rolam</h1>
-        <h1>Kontakt</h1>
+    <div className="flex fixed w-full h-14 bg-white shadow-xl justify-end items-center md:justify-center">
+      <div className="hidden md:flex md:justify-between md:w-2/4">
+        <a href="#kezdolap">Kezdőlap</a>
+        <a href="#rolam">Rólam</a>
+        <a href="#kezdolap">Kapcsolat</a>
       </div>
       <div
         className={
-          "bg-blue-400 fixed flex flex-col justify-center items-center h-screen w-screen inset-0 ease-in-out transition-all duration-300 " +
+          "bg-blue-300 fixed flex flex-col justify-center items-center h-screen w-screen inset-0 ease-in-out transition-all duration-300 " +
           (toggle ? "transform translate-x-0" : "transform -translate-x-full")
         }>
-        {/* <div> */}
-          <a href="#kezdolap" onClick={openMenu}>Kezdolap</a>
-          <a href="#rolam" onClick={openMenu}>Rolam</a>
+        <div className="h-2/6 text-xl flex flex-col items-center justify-around">
+          <a href="#kezdolap" onClick={openMenu}>Kezdőlap</a>
+          <a href="#rolam" onClick={openMenu}>Rólam</a>
           <a href="#kontakt" onClick={openMenu}>Kontakt</a>
-        {/* </div> */}
+        </div>
       </div>
       <div onClick={openMenu} className="md:hidden z-50 justify-self-end">
-        <MenuIcon fontSize="large" />
+        <MenuIcon className="m-4" fontSize="large" />
       </div>
     </div>
   );

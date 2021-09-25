@@ -20,10 +20,8 @@ export default function Home() {
       <div>
         <Navigation />
         <img id="kezdolap" src={img} alt="yoga" className="object-fill" />
-        <div className="flex flex-col text-xl p-24 h-4/5 justify-center content-center">
-          <div className="py-6">
-            <h1>Kezdolap</h1>
-            <h2 className="text-center">Rólam</h2>
+        <div className="flex flex-col text-xl p-16 h-4/5 justify-center content-center text-center">
+            <h2 className="mb-6 text-2xl">Rólam</h2>
             <p>
               Kovács Kincső vagyok, jógaoktató. 2020-ban szereztem oklevelet,
               hatha és hatha-flow jóga oktató lettem . Tovább szeretném bővíteni
@@ -33,8 +31,6 @@ export default function Home() {
               ahogy a csoportom megkívánja . Nők, lányok, férfiak egyaránt részt
               vesznek az oraimon.
             </p>
-          </div>
-          <h1 id="rolam">Rolamn</h1>
           <div className="py-6">
             A jóga számomra kikapcsolódás, lecsendesedés és egyszerre dinamikus
             mozgás. Minden élethelyzetben segítség . Sosem késő elkezdeni ,
@@ -44,13 +40,14 @@ export default function Home() {
             Ha szeretnéd felvenni velem a kapcsolatot, keress a megadott
             elérhetőségeken Namaste, Kincső
           </div>
-          <h1 id="kontakt">Kontatkt</h1>
           <div className="py-6 text-center">
-            <h2>Kapcsolat</h2>
+            <h2 className="mb-6 text-2xl">Kapcsolat</h2>
             <p>Kovács Kincső Sára </p>
-            <p>0670-636-9104</p>
-            <p>kincsokovacs96@gmail.com</p>
-            <p>Instagram : Kincs.o.yoga</p>
+            <a href="tel:+36706369104">+36-70-636-9104</a>
+            <br/>
+            <a href="mailto:kincsokovacs96@gmail.com">kincsokovacs96@gmail.com</a>
+            <br />
+            <a href="https://www.instagram.com/kincs.oyoga/">Instagram: kincs.o.yoga</a>
           </div>
         </div>
       </div>
