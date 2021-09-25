@@ -2,3 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
+/* // @import './assets/scss/variables'; */
+
+.navigation__menu {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 10px;
+}
+@media screen and (min-width: 480px) {
+    .navigation__menu {
+        display: none;
+    }
+}
+
+.navigation {
+    height: 50px;
+}
+
+.navigation__modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 0%;
+    overflow-y: hidden;
+    position: fixed;
+    z-index: 900;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    color: red;
+    text-shadow: 2px 2px #D071A6;
+    transition: all 0.5s ease-in-out
+}
+
+.navbar {
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+
+}
+h1 {
+    margin: 20px;
+}
+@media screen and (max-width: 480px) {
+    .navbar {
+        display: none;
+    }
+}

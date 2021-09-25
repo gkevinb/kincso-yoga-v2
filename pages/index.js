@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
 import Navbar from "../components/Navbar";
+import Navigation from "../components/Navigation";
 
 const img = "/img/yoga.jpg";
 
@@ -17,8 +18,9 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div>
-                <Navbar />
-                <img src={img} alt="yoga" />
+                {/* <Navbar /> */}
+                <Navigation />
+                <img src={img} alt="yoga" className="object-fill"/>
                 <div className="flex flex-col text-xl p-24 h-4/5 justify-center content-center">
                     <div className="py-6">
                         <h2 className="text-center">Rólam</h2>
