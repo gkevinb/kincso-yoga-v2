@@ -19,9 +19,10 @@ export default function Home() {
       </Head>
       <div>
         <Navigation />
-        <img src={img} alt="yoga" className="object-fill" />
+        <img id="kezdolap" src={img} alt="yoga" className="object-fill" />
         <div className="flex flex-col text-xl p-24 h-4/5 justify-center content-center">
           <div className="py-6">
+            <h1>Kezdolap</h1>
             <h2 className="text-center">Rólam</h2>
             <p>
               Kovács Kincső vagyok, jógaoktató. 2020-ban szereztem oklevelet,
@@ -33,6 +34,7 @@ export default function Home() {
               vesznek az oraimon.
             </p>
           </div>
+          <h1 id="rolam">Rolamn</h1>
           <div className="py-6">
             A jóga számomra kikapcsolódás, lecsendesedés és egyszerre dinamikus
             mozgás. Minden élethelyzetben segítség . Sosem késő elkezdeni ,
@@ -42,6 +44,7 @@ export default function Home() {
             Ha szeretnéd felvenni velem a kapcsolatot, keress a megadott
             elérhetőségeken Namaste, Kincső
           </div>
+          <h1 id="kontakt">Kontatkt</h1>
           <div className="py-6 text-center">
             <h2>Kapcsolat</h2>
             <p>Kovács Kincső Sára </p>

@@ -3,7 +3,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 
 function Navigation() {
   const [toggle, setToggle] = useState(false);
-  const [width, setWidth] = useState("0%");
+  // const [width, setWidth] = useState("0%");
 
   console.log(toggle);
 
@@ -13,10 +13,10 @@ function Navigation() {
   useEffect(() => {
     if (toggle) {
       document.body.style.overflow = "hidden";
-      setWidth("100%");
+      // setWidth("100%");
     } else {
       document.body.style.overflow = "unset";
-      setWidth("0%");
+      // setWidth("0%");
     }
   }, [toggle]);
 
@@ -29,13 +29,14 @@ function Navigation() {
       </div>
       <div
         className={
-          toggle
-            ? "bg-blue-400 fixed flex h-screen w-screen inset-0"
-            : "hidden"
+          "bg-blue-400 fixed flex flex-col justify-center items-center h-screen w-screen inset-0 ease-in-out transition-all duration-300 " +
+          (toggle ? "transform translate-x-0" : "transform -translate-x-full")
         }>
-        <h1>Kezdolap</h1>
-        <h1>Rolam</h1>
-        <h1>Kontakt</h1>
+        {/* <div> */}
+          <a href="#kezdolap" onClick={openMenu}>Kezdolap</a>
+          <a href="#rolam" onClick={openMenu}>Rolam</a>
+          <a href="#kontakt" onClick={openMenu}>Kontakt</a>
+        {/* </div> */}
       </div>
       <div onClick={openMenu} className="md:hidden z-50 justify-self-end">
         <MenuIcon fontSize="large" />
